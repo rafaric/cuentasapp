@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'cuentas.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'accounts',
+        'NAME': 'd2m7hhdsbgv2a1',
         'USER': 'zmbvvkzdjwyhro',
         'PASSWORD': '1146ba56ab7a21a8edc299dc1c19e6cce90d78b4c827e88d1a3cfc3ad99f5e5c',
         'HOST': 'ec2-54-204-241-136.compute-1.amazonaws.com',
