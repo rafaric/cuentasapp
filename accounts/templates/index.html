@@ -73,7 +73,23 @@
                             {% if cuenta.cant_perfiles > 0 %}
                                 <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Libre</div>
                             {% endif %}
-                            <img class="card-img-top" src="{{ cuenta.imagen.url }}" alt="..." />
+                            {% if cuenta.servicio == "Netflix" %}
+                                <img class="card-img-top" src="{% static 'images/Netflix.jpg' }}" alt="..." />
+                            {% elif cuenta.servicio == "Flow" %}
+                                <img class="card-img-top" src="{% static 'images/Flow.jpg' }}" alt="..." />
+                            {% elif cuenta.servicio == "Prime" %}
+                                <img class="card-img-top" src="https://logodownload.org/wp-content/uploads/2018/07/prime-video-8.png" alt="..." />
+                            {% elif cuenta.servicio == "Star+" %}
+                                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Star%2B_logo.svg/240px-Star%2B_logo.svg.png" alt="..." />
+                            {% elif cuenta.servicio == "Disney+" %}
+                                <img class="card-img-top" src="https://i0.wp.com/www.ultimatepocket.com/wp-content/uploads/2019/11/disney-is-now-available-on-samsung-tvs-1.png" alt="..." />
+                            {% elif cuenta.servicio == "DirectvGo" %}
+                                <img class="card-img-top" src="https://logodownload.org/wp-content/uploads/2021/04/directvgo-logo-logo-2-599x81.png" alt="..." />
+                            {% elif cuenta.servicio == "HBO Max" %}
+                                <img class="card-img-top" src="https://vpn-surf.com/wp-content/uploads/2020/06/picture-4.png " alt="..." />    
+                            {% else %}
+                                <img class="card-img-top" src="https://cdn.onlinewebfonts.com/svg/img_98811.png" alt="..." />
+                            {% endif %}
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
