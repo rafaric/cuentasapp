@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container">
+<div class="card">
+    <div class="card-header text-center">
+        {{ cuenta.servicio }}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title text-center">{{ cuenta.correo }}</h5>
+      <p class="card-text">Cantidad de perfiles {{ cuenta.cant_perfiles }}</p>
+      <p class="card-text text-center" style="text-decoration: underline;">Clientes:</p>
+      {% for client in venta %}
+        <p class="card-text text-center">{{ client.cliente }}</p>
+      {% endfor %}
+      <a href="#" class="btn btn-primary">Editar</a>
+    </div>
+  </div>
+</div>
+ 
+{% endblock %}
